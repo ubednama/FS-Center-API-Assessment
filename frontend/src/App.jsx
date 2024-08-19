@@ -62,7 +62,7 @@ function App() {
     const debounceTimer = setTimeout(() => {
       if (searchTerm) fetchCardData(searchTerm);
       else fetchCardData("");
-    }, 300); // 300ms delay
+    }, 300);
 
     return () => clearTimeout(debounceTimer);
   }, [searchTerm, fetchCardData]);

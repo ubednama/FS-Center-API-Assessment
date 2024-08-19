@@ -6,7 +6,7 @@ const CardComponent = ({cardData, error, isLoading}) => {
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2  gap-6 max-w-5xl py-20">
         {error && <div>{error}</div>}
         {isLoading && <div>Loading...</div>}
-        {cardData.length > 0 &&
+        {!isLoading && cardData.length > 0 &&
           cardData.map((item, index) => (
             <Card key={index} item={item}/>
           ))}
